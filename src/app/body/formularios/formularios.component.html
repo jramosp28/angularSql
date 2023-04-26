@@ -1,0 +1,55 @@
+<div class="form-container">
+    <form [formGroup]="MyNewForm">
+        <div>
+            <label for="name"> Nombre: </label>
+            <input type="text" #name id="name" formControlName="name">
+        </div>
+        <div>
+            <label for="lastName"> Apellido paterno: </label>
+            <input type="text" #lastName id="lastName" formControlName="lastName">
+        </div>
+        <div>
+            <label for="lastName2"> Apellido materno: </label>
+            <input type="text" #lastName2 id="lastName2" formControlName="lastName2">
+        </div>
+        <div>
+            <label for="email"> Correo electrónico: </label>
+            <input type="email" #email id="email" formControlName="email">
+        </div>
+        <div>
+            <label for="phone"> Teléfono: </label>
+            <input type="text" #phone id="phone" formControlName="phone">
+        </div>
+        <div>
+            <label for="address"> Dirección: </label>
+            <input type="text" #address id="address" formControlName="address">
+        </div>
+        <div>
+            <label for="city"> Ciudad: </label>
+            <input type="text" #city id="city" formControlName="city">
+        </div>
+        <div>
+            <label for="date"> Fecha: </label>
+            <input type="date" #date id="date" formControlName="date">
+        </div>
+        <div class="moto">
+            <div>
+                <label for="bike"> Tienes moto? </label>
+                <input type="checkbox" #bike id="bike" formControlName="bike">
+            </div>
+            <div>
+                <label for="bikeModel"> Tipo de moto: </label>
+                    <select id="bikeModel" name="bikeModel" formControlName="bikeModel">
+                        <option value="No">No</option>
+                        <option value="Scooters">Scooters</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Deportivas">Deportivas</option>
+                        <option value="Naked">Naked</option>
+                    </select>
+            </div>
+        </div>
+        <div class="but">
+            <button type="reset" [disabled]="MyNewForm.invalid" (click)="SubmitData()">Enviar</button>
+        </div>
+    </form>
+</div>

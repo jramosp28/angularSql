@@ -1,0 +1,34 @@
+<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido paterno</th>
+        <th>Apellido materno</th>
+        <th>Correo electrónico</th>
+        <th>Teléfono</th>
+        <th>Dirección</th>
+        <th>Ciudad</th>
+        <th>Fecha</th>
+        <th>Tienes moto?</th>
+        <th>Tipo de moto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let clientes of form">
+        <tr>
+          <td>{{ clientes.name }}</td>
+          <td>{{ clientes.lastName }}</td>
+          <td>{{ clientes.lastName2 }}</td>
+          <td>{{ clientes.email }}</td>
+          <td>{{ clientes.phone }}</td>
+          <td>{{ clientes.address }}</td>
+          <td>{{ clientes.city }}</td>
+          <td>{{ clientes.date }}</td>
+          <td>{{ clientes.bike }}</td>
+          <td>{{ clientes.bikeModel }}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>
